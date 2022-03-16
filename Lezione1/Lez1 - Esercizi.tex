@@ -1,0 +1,72 @@
+\documentclass[a4paper, 10pt]{article}
+\usepackage[italian]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage[shortlabels]{enumitem} % necessario solo per Esercizio 3.2
+\author{Andrea Di Primio}
+\date{29 novembre 2021}
+\title{Lezione 1: Comandi base di \LaTeX}
+\begin{document}
+	\maketitle
+	\section{Esercizio 1: Hello, World!}
+	Hello, World!
+	\section{Esercizio 2: Strutturare un documento}
+		\subsection{Sottosezione numerata}
+		\textbf{Questo} è il testo della \textbf{prima} sottosezione.\\ 
+		Il suo contenuto è di alta caratura \textit{intellettuale}.
+		\subsection*{Sottosezione non numerata}
+		La seconda \textbf{sotto}\textit{sezione} è ancora più complicata della prima.\\[1.5\baselineskip] 
+		Ho lasciato una riga vuota e mezzo per sottolinearlo.\\[\baselineskip] 
+		Dopo un'altra riga vuota, creata con \verb!\\[\baselineskip]!, una nota importante.
+	\section{Esercizio 3: Un elenco di grandezze di testo {\tiny (o la quiete prima della tempesta)}}
+		\subsection{Elenco numerato}
+		\begin{enumerate}
+			\item {\small small},
+			\item {\normalsize normalsize},
+			\item {\large large},
+			\item {\huge huge},
+			\item {\Huge Huge}.
+		\end{enumerate}
+		\subsection{Bonus points: usando \texttt{enumitem}}
+		\begin{enumerate}[(i)]
+			\item {\small small},
+			\item {\normalsize normalsize},
+			\item {\large large},
+			\item {\huge huge},
+			\item {\Huge Huge}.
+		\end{enumerate}
+	\section{Esercizio 4: Il teorema di Lagrange}
+	Sia $[a,b]$ un intervallo reale e sia $f: [a,b] \to \mathbb{R}$ una funzione continua in $[a,b]$ e derivabile in $(a,b)$. Esiste $\xi \in (a,b)$ tale che	
+	\begin{equation*}
+		f'(\xi) = \frac{f(b)-f(a)}{b-a}.
+	\end{equation*}
+	\section{Esercizio 5: Equazioni!}
+	Ecco alcune equazioni:
+	\begin{equation*}
+		\sin^2(x) + \cos^2(x) = 1 
+	\end{equation*}
+	\begin{equation*}	
+		\begin{cases}
+			\left( x + y\right)^{\alpha\beta+\delta} & = 1, \\
+			\cos(xy) & = 0.
+		\end{cases}
+	\end{equation*}
+	\begin{equation*}
+		\frac{\mathrm{d}^2f}{\mathrm{d}x^2} + \frac{\mathrm{d}f}{\mathrm{d}x} = 4f - 1 
+	\end{equation*}
+	\begin{equation*}
+		\begin{bmatrix}
+			a_{11} & a_{12} \\ a_{21} & a_{22} 
+		\end{bmatrix} 
+		\begin{bmatrix}
+			x_1 \\ x_2
+		\end{bmatrix} = 
+		\begin{bmatrix}
+			b_1 \\ b_2
+		\end{bmatrix}
+	\end{equation*}
+	Bonus points!
+	\[
+	\sup_{x \in [0,1]} \left( \inf_{y \in [0,1]} |\mathbf{g}(x,y)| - \sqrt{|\mathbf{g}(x,y)}| \right) = \frac{3}{4}.
+	\]
+\end{document}

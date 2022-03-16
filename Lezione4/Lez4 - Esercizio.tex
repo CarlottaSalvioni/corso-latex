@@ -1,0 +1,85 @@
+\documentclass[10pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usetheme{Warsaw} 
+\usecolortheme{crane} 
+\usefonttheme[onlymath]{serif} % changes font for math text
+
+\title{A Friendly Reminder: Polynomial Equations}
+\subtitle{(One among infinitely many) Solution to the Exercise}
+\author{Andrea Di Primio}
+\date{\today \:(or whatever day it will be)}
+\begin{document}
+
+\begin{frame}[plain]
+	\maketitle
+\end{frame}
+
+\begin{frame}{What is a polynomial equation?}
+
+\begin{definition}[Polynomial equation]
+	A polynomial equation is an equality between two polynomials. 	
+\end{definition}
+\begin{definition}[Degree of a polynomial equation]
+	The degree of a polynomial equation of the form $P(x,y,...) = 0$ is defined as the degree of $P(x,y,...)$.
+\end{definition}
+\vspace{2\baselineskip}
+\begin{minipage}{0.48\linewidth}
+	\[ x^3 = x^3 + 4x + 7y - 1 \]
+\begin{center}
+	Two-variable, $1^{st}$ degree\\ polynomial equation
+\end{center}
+\end{minipage}
+\begin{minipage}{0.48\linewidth}
+	\[ x^5 + 7x = 0 \]
+\begin{center}
+	One-variable, $5^{th}$ degree\\ polynomial equation
+\end{center}
+\end{minipage}
+\end{frame}
+
+\begin{frame}{Quadratic equations}
+A polynomial equation of degree 2 is also called quadratic equation.\\[\baselineskip]
+Assuming to work with one complex variable $x$, the most general quadratic equation is
+\[ ax^2 + bx + c = 0 \]
+where $a, b, c$ are given complex numbers such that $a \neq 0$, called coefficients.\\[\baselineskip]
+\begin{theorem}[Solutions of a quadratic equation I]
+	A quadratic equation in one complex variable has exactly two complex solutions.
+\end{theorem}
+\end{frame}
+
+\begin{frame}{Solving the quadratic equation}
+\begin{theorem}[Solutions of a quadratic equation II]
+	Given three complex quantities $a,b,c$, with $a \neq 0$, the quadratic equation
+	\[ ax^2 + bx + c = 0 \]
+	has the two (complex) solutions
+	\[ x_{1,2} = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \]
+	and no other ones.
+\end{theorem}
+\end{frame}
+
+\begin{frame}{A different approach to root calculation}
+\begin{theorem}[Vieta's formulas for quadratic polynomials]
+	Given a polynomial equation of degree 2 with complex coefficients
+	\[ ax^2 + bx + c = 0 \]
+	let $x_1, x_2$ be its solutions. Then the following relations hold:
+	\[ \begin{cases}
+		x_1 + x_2  = -\dfrac{b}{a}\\
+		x_1x_2 = \dfrac{c}{a}\\
+	\end{cases}\]
+\end{theorem}
+\end{frame}
+
+\begin{frame}{An example}
+	Let us solve the equation:
+	\[ ix^2 + \sqrt{3}x - 1 = 0 \]
+	Using the formula to obtain solutions:
+	\[ x_{1,2} = \dfrac{-\sqrt{3} \pm \sqrt{3 + 4i}}{2i} \]
+ 	which can be further simplified (do it!) to find
+ 	\[ \begin{cases}
+ 	 x_1 = \dfrac{1}{2} + i\left(\dfrac{\sqrt{3}}{2} - 1 \right)\\
+ 	 x_2 = -\dfrac{1}{2} + i\left(\dfrac{\sqrt{3}}{2} + 1 \right)\\
+ 	\end{cases}\]
+\end{frame}
+\appendix
+%Consider inserting long proofs in due detail in the appendix. Presentations including tedious derivations tend to be boring!
+\end{document}
