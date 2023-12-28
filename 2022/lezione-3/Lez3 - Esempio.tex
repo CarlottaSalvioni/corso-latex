@@ -1,0 +1,65 @@
+\documentclass[10pt, twoside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx, float, caption, subcaption}
+\usepackage{multirow, booktabs}
+\usepackage[pass]{geometry}
+\usepackage[italian]{babel}
+\usepackage[sortcites=true, style=numeric, sorting=nty, backend=bibtex]{biblatex}
+\usepackage{mypackage}
+\addbibresource{sources.bib}
+%\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, bottom=2.00cm]{geometry}
+\author{Andrea Di Primio}
+\title{Lezione 3: Esercizi}
+\date{9 dicembre 2021}
+\newtheorem{prop}{Proposition}[section]
+\newcommand{\myint}[4]{\int_{#1}^{#2} #3 \: \mathrm{d}#4}
+\newenvironment{esercizio}[1][Esercizio]{\vspace{\baselineskip} \begin{tabular}{|p{\textwidth}|} \hline\textbf{#1}. }{ \\ \hline\end{tabular} \vspace{\baselineskip}}
+\begin{document}
+	\begin{titlepage}
+		\newgeometry{margin=2cm}
+		\thispagestyle{empty}
+		\maketitle
+	\end{titlepage}
+
+	\frontmatter
+	\chapter*{Abstract} 
+	Abstract in inglese.
+	\chapter*{Sommario} 
+	Sommario in italiano.
+	\chapter*{Ringraziamenti}
+	Ringraziamenti.
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	
+	\mainmatter
+	\chapter{Primo capitolo}
+	Un riferimento a \cite{testart21}, \cite{testbook21}, \cite{testbook21, testart21}.
+	\section{Prima sezione del primo capitolo}
+	\begin{equation*}
+		\myint{a}{b}{f(x)}{x}
+	\end{equation*}
+	\begin{esercizio}
+		 Calcolare i valori di interi positivi di $n$ per cui $n^2-14n+32$ è un numero primo.
+	\end{esercizio}
+	\begin{esercizio}[Esercizio più difficile]
+		Calcolare i valori interi positivi di $n$ per cui $n!$ termina con esattamente 1000 zeri.
+	\end{esercizio}
+	\mycmd{Un pacchetto personalizzato}
+	\section{Seconda sezione del primo capitolo}
+	\section{Terza sezione del primo capitolo}
+	\input{chapters/chapter.tex}
+	
+	\appendix
+	\chapter{Prima appendice}
+	\chapter{Seconda appendice}
+	
+	\backmatter
+	%\nocite{*}
+	\printbibliography[heading=bibintoc, title=Bibliografia]
+	
+\end{document}

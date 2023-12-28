@@ -1,0 +1,99 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx, float, caption, subcaption}
+\usepackage{multirow, booktabs}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, bottom=2.00cm]{geometry}
+\author{Andrea Di Primio}
+\title{Lezione 2: Esercizi}
+\newtheorem{prop}{Proposition}[section]
+\begin{document}
+	\maketitle
+\section{Esercizio 1: il nostro primo teorema (e sua dimostrazione)}
+\begin{prop}[Vitali]
+	Se $A \subset \mathbb{R}^n$ è un insieme aperto, allora esiste $B \subset A$ non misurabile secondo Lebesgue.
+\end{prop}
+\begin{proof}[Dimostrazione (solo un commento)]
+	Una costruzione dell'insieme $B$, detto insieme di Vitali, non è banale e richiede l'uso dell'assioma della scelta.
+\end{proof}
+
+\section{Esercizio 2: un album fotografico}
+\begin{figure}[H]
+	\begin{subfigure}[t]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{example-image-a}
+		\caption{Helsinki, 1915.}
+	\end{subfigure} \hfill
+	\begin{subfigure}[t]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{example-image-b}
+		\caption{Ivrea, 1901.}
+	\end{subfigure} \hfill
+	\begin{subfigure}[t]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{example-image-c}
+		\caption{Dublino, 1899.}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{example-image-a}
+		\caption{Dresda, 1914.}
+	\end{subfigure} \hfill
+	\begin{subfigure}[t]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{example-image-b}
+		\caption{Empoli, 1901.}
+	\end{subfigure} \hfill
+	\begin{subfigure}[t]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{example-image-c}
+		\caption{Napoli, 1916.}
+	\end{subfigure}
+	\caption{Belle città!}
+\end{figure}
+
+\section{Esercizio 3: una tabella un po' particolare}
+\begin{table}[H] 
+	\begin{center}
+		\begin{tabular}{|c|cc|cc|c|}
+			\textbf{Col. 1} & \textbf{Col. 2} & \textbf{Col. 3} & \textbf{Col. 4} & \textbf{Col. 5} & \textbf{Col. 6}\\
+			$\frac{2}{3}, \frac{1}{2},...$ & $\beta$ & $\gamma$ & $\delta^\xi$ & $\sin\lambda$ & $\log \pi$\\
+			\hline 
+			\multirow{3}{*}{Tre righe!} & a & b & c & d & e \\
+			& f & g & h & i & j \\
+			& k & l & m & n & o \\  % <-- Content of first column omitted.
+			\hline
+			\multicolumn{2}{|c|}{E questa?} & \multicolumn{4}{r}{Lascio aperto qui $\to$} \\
+			\hline
+			\multicolumn{3}{l}{$\to$ e rientro qui!} & \multicolumn{3}{c}{\texttt{bottomrule da 1 mm} $\downarrow$}\\
+			\bottomrule[0.1cm]
+		\end{tabular}
+		\caption{Una tabella un po' particolare.}
+	\end{center}
+\end{table}
+\section{Esercizio 4: l'occhio vuole la sua parte!}
+\begin{minipage}[t][.3\textheight]{0.49\textwidth}
+	La prima lettera dell'alfabeto è illustrata nella Figura seguente. Appare, nella lingua italiana, con una frequenza del 11.74\% circa (fonte Wikipedia).
+	\vfill
+	\begin{figure}[H]
+		\includegraphics[width=\textwidth]{example-image-a}
+	\end{figure}
+\end{minipage} \hfill
+\begin{minipage}[t][.3\textheight]{0.49\textwidth}
+	Altre lettere includono la B e la C, meno frequenti, illustrate di seguito.
+	\begin{figure}[H]
+		\begin{subfigure}[t]{0.4\textwidth}
+			\includegraphics[width=\textwidth]{example-image-b}
+		\end{subfigure} \hfill
+		\begin{subfigure}[t]{0.4\textwidth}
+			\includegraphics[width=\textwidth]{example-image-c}
+		\end{subfigure}
+	\end{figure} \vfill
+	La tabella riassume le loro frequenze alla seconda cifra decimale:
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{c|c}
+			A & 11.74\% \\
+			B & 0.92\% \\
+			C & 4.50\% 
+		\end{tabular}
+	\end{table}
+\end{minipage} \\
+\end{document}
