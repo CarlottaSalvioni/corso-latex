@@ -1,0 +1,39 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+
+%questo file va compilato direttamente con pdflatex/latex
+%Di solito l'editor (TeXStudio o altro) provvede a lanciare anche bibtex. Per rilanciarlo manualmente (su TeXStudio) andare su Tools->Bibliography.
+
+%In caso, si può compilare manualmente utilizzando
+%(pdf)latex
+%bibtex
+%(pdf)latex
+%(pdf)latex
+
+\title{Prova con bib\TeX}
+\author{Nahuel Foresta}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\section{Vediamo che si può fare}
+A titolo di esempio citiamo \cite{Nahuel19}
+
+\vspace{5cm}
+
+%verranno visualizzate solo le voci citate.
+%per visualizzare tutto decommentare la riga seguente:
+%\nocite{*}
+
+%questo specifica lo stile
+\bibliographystyle{plain}
+
+%questo specifica il file .bib da usare
+\bibliography{sources}
+
+\end{document}

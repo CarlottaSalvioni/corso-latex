@@ -1,0 +1,36 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{csquotes}
+
+%utilizzo di biblatex al posto che bibtex.
+%l'opzione bibtexu permette di usare caratteri utf8 negli accenti; un'alternativa è biber, ma occorre impostare appositamente l'editor
+\usepackage[backend=bibtexu]{biblatex}
+
+%file .bib che viene usato per la bibliografia
+\bibliography{sources}
+
+
+\title{Prova con biblatex}
+\author{Nahuel Foresta}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\section{Vediamo che si può fare}
+A titolo di esempio citiamo \cite{Nahuel19}
+
+%spazio verticale
+\vspace{5cm}
+
+%verranno visualizzate solo le voci citate.
+%per visualizzare tutto decommentare la riga seguente:
+%\nocite{*}
+
+\printbibliography
+
+\end{document}

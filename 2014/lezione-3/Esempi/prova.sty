@@ -1,0 +1,17 @@
+\ProvidesPackage{prova}
+
+% Sintassi comoda
+% \usepackage[italian]{babel}
+% \usepackage{amsmath, amssymb}
+% \usepackage{xspace}
+
+% Sintassi corretta (da decommentare)
+\@ifpackageloaded{babel}{}{\RequirePackage[italian]{babel}}
+\@ifpackageloaded{amsmath}{}{\RequirePackage{amsmath}}
+\@ifpackageloaded{amssymb}{}{\RequirePackage{amssymb}}
+\@ifpackageloaded{xspace}{}{\RequirePackage{xspace}}
+
+\newcommand{\eee}{\`e\xspace}
+\newcommand{\EEE}{\`E\xspace}
+\newcommand{\vect}[1]{\underline{#1}}
+%\newcommand{\vect}[1]{\mathbf{#1}}

@@ -1,0 +1,40 @@
+\documentclass{article}
+
+\usepackage[italian]{babel}
+
+\title{titolo}
+\author{autori}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Un esempio}
+
+Serve aver studiato \cite[Cap. 2]{quarteroni} per capire di cosa stiamo parlando. \\
+\textbf{Bibliografia 1:}
+\begin{thebibliography}{9}
+\addcontentsline{toc}{section}{Prima Bibliografia}
+\bibitem{mox21}
+    L. Formaggia, A. Veneziani, \emph{Reduced and multiscale models for the human cardiovascular system},
+    Technical report, Politecnico di Milano (2003).
+    Collection of two lecture notes given at the VKI Lecture Series 2003-2007.
+\bibitem{quarteroni}
+    A. Quarteroni, \emph{Modellistica numerica per problemi differenziali},
+    Springer. Quarta edizione (2008).
+\end{thebibliography}
+\textbf{Bibliografia 2:}
+\begin{thebibliography}{For.Ven. 2003}
+\addcontentsline{toc}{section}{Seconda Bibliografia}
+	\bibitem[For.Ven. 2003]{mox21}
+    	L. Formaggia, A. Veneziani, \emph{Reduced and multiscale models for the human cardiovascular system},
+        Technical report, Politecnico di Milano (2003).
+        Collection of two lecture notes given at the VKI Lecture Series 2003-2007.
+	\bibitem[Quart. 2008]{quarteroni}
+    	A. Quarteroni, \emph{Modellistica numerica per problemi differenziali},
+        Springer. Quarta edizione (2008).
+\end{thebibliography}
+
+\end{document}

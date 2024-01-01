@@ -1,0 +1,56 @@
+\documentclass{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage[italian]{babel}
+\usepackage[pdftex]{graphicx}
+\graphicspath{{img/}}
+\usepackage{subfig}
+\usepackage{epstopdf}
+
+\begin{document}
+
+\section{Immagini allineate}
+
+\subsection{L'ambiente \texttt{minipage}}
+
+	\begin{figure}
+    	\begin{minipage}{0.4\textwidth}
+        	\centering
+        	\includegraphics[width=\textwidth]{AIM}
+        	\caption{Questo è il logo .eps}
+        	\label{fig:minipage1}
+	   \end{minipage}
+    	\hfill
+    	\begin{minipage}{0.4\textwidth}
+        	\centering
+        	\includegraphics[width=\textwidth]{AIM_eps_falso}
+        	\caption{Questo è il logo .jpg}
+        	\label{fig:minipage2}
+    	\end{minipage}
+    	\caption{Formati grafici con \texttt{minipage}.}
+    	\label{fig:minipage}
+	\end{figure}
+	
+	Un esempio di minipage in figura \ref{fig:minipage}: il logo in formato .eps in figura \ref{fig:minipage1} e in formato .jpg in figura \ref{fig:minipage2}.
+
+\subsection{L'ambiente \texttt{subfloat}}
+
+	\begin{figure}
+	\centering
+	\subfloat[Questo è il logo .eps]{
+    	\label{fig:subfloat1}
+    	\includegraphics[width=0.4\textwidth]{AIM}
+	}
+	\qquad
+	\subfloat[Questo è il logo .jpg]{
+    	\label{fig:subfloat2}
+    	\includegraphics[width=0.4\textwidth]{AIM_eps_falso}
+	}
+	\caption{Formati grafici con \texttt{subfloat}.}
+	\label{fig:subfloat}
+	\end{figure}
+
+	Un esempio di subfloat in figura \ref{fig:subfloat}: il logo in formato .eps in figura \ref{fig:subfloat1} e in formato .jpg in figura \ref{fig:subfloat2}.
+    
+    Notate la differenza nei riferimenti.
+\end{document}

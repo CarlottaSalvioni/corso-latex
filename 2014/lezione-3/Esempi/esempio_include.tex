@@ -1,0 +1,29 @@
+\documentclass{article}
+
+\usepackage{prova}
+\usepackage[italian]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{xspace}
+\usepackage{array}
+\usepackage{booktabs}
+
+
+%Questo comando indica quali degli include dentro
+%il documento effettivamente aggiungere
+\includeonly{
+include/01,
+include/02,
+include/03,
+include/bib}
+
+\begin{document}
+
+\tableofcontents
+
+%Qua vengono inseriti gli include
+\include{include/01}
+\include{include/02}
+\include{include/03}
+\include{include/bib}
+
+\end{document}

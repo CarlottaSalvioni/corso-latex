@@ -1,0 +1,118 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+%xcolor={dvipsnames} è per utilizzare colori non standard.
+%Tabella completa dei colori: http://en.wikibooks.org/wiki/LaTeX/Colors
+
+% Stile per Beamer
+\usetheme{Warsaw}
+\usecolortheme[named=NavyBlue]{structure}
+
+\setbeamertemplate{caption}[numbered] % per stampare il numero di etichetta delle immagini
+\setbeamertemplate{theorems}[numbered] % per stampare il numero di etichetta dei teoremi
+
+% Pacchetti
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+%Per i links
+\usepackage{hyperref}
+\usepackage{graphicx}
+\graphicspath{{img/}}
+
+\beamertemplatearrowbibitems % frecce accanto alle voci della bibliografia
+
+% Informazioni sulla presentazione
+\title{La nostra prima presentazione in \LaTeX \\ con titolo su due righe}
+\author[Autori sintetici]{Autori in versione estesa}
+\date{Data della presentazione}
+\institute[Polimi]{Politecnico di Milano}
+\titlegraphic{\includegraphics[scale=0.05]{logo-aim}}
+
+%Se volete togliere le reference!!!
+%\usepackage[bf,footnotesize,center]{caption}
+%\captionsetup{labelformat=empty,labelsep=none}
+
+\begin{document}
+
+\titlepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Prima sezione}
+\begin{frame}{Questa è la prima slide}
+    È possibile inserire tutto ciò che abbiamo già visto (e anche di più!):
+
+    \begin{itemize}[<+->] %Appare un elemento per volta.
+     \item Elenchi puntati o numerati
+     \item equazioni: $\frac{\partial \mathbf{U}}{\partial t} + \frac{\partial \mathbf{F}(\mathbf{U})}{\partial x} = \mathbf{f}$;
+     \item[@] link: \url{http://www.aim-mate.it};
+     \item teoremi, dimostrazioni;
+     \item tabelle, immagini, \textbf{filmati};
+     \item bibliografia;
+     \item everything else \ldots
+    \end{itemize}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Seconda sezione}
+\subsection{Prima sottosezione}
+\begin{frame}{Una slide con il sottotitolo}
+\framesubtitle{Questo è il sottotitolo}
+
+    Sono presenti tutti gli ambienti matematici che vengono racchiusi in blocchi predefiniti:
+
+    \begin{theorem}
+    \label{teorema:prova}
+    Questo è l'enunciato di un teorema.
+    \end{theorem}
+    \begin{proof}
+    Questa ne è la dimostrazione.
+    \end{proof}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Seconda sottosezione}
+\begin{frame}[fragile]{Inseriamo uno script di codice}
+
+  \begin{figure}[h]
+  \includegraphics[height=0.3\textheight]{AIM.eps}
+  \caption{Didascalia}
+  \label{fig:AIM} % da mettere SEMPRE dopo \caption{}
+  \end{figure}
+  
+  Si possono citare figure (Fig. \ref{fig:AIM}), teoremi (Teorema \ref{teorema:prova}), equazioni e ovviamente anche elementi della bibliografia \cite{artelatex}.
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Altri tipi di blocchi}
+    \begin{exampleblock}{Esempio}
+    Blocco per gli esempi.
+    \end{exampleblock}
+    
+    \begin{alertblock}{Attenzione!}
+    Blocco per gli alert.
+    \end{alertblock}
+    
+    \begin{block}{}
+    Un blocco può anche non avere un titolo (le graffe sono obbligatorie, anche se dentro sono vuote).
+    \end{block}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Bibliografia}
+    \begin{thebibliography}{artelatex}
+%	\addcontentsline{toc}{section}{Bibliografia}
+	\bibitem[Pantieri 08]{artelatex} L. Pantieri, \emph{L'arte di scrivere con \LaTeX}. \url{http://www.lorenzopantieri.net/LaTeX_files/ArteLaTeX.pdf}. (2008).
+	\bibitem[Esempio]{esempio} Autore, \emph{Titolo}. Rivista. 2015.
+    \end{thebibliography}
+\end{frame}
+
+\end{document}

@@ -1,0 +1,54 @@
+\documentclass{article}
+
+
+%I due pacchetti seguenti servono per aggungere l'ambiente lstlisting
+%e aggiungere pezzi di codice nel documento
+\usepackage{listings}
+\usepackage[dvipsnames]{xcolor}
+
+
+%La seguente istruzione serve per settare i paramentri di lstlisting
+\lstset{
+    inputencoding=utf8/latin1,
+	rulecolor=\color{black},
+    keywordstyle=\color{RoyalBlue},%\bfseries,
+    basicstyle=\small\ttfamily,
+    identifierstyle=\color{BrickRed},
+    commentstyle=\color{Green}\ttfamily,
+    stringstyle=\rmfamily,
+    numbers=left,
+    numberstyle=\scriptsize,%\tiny
+    stepnumber=5,
+    numbersep=8pt,
+    showstringspaces=true,
+    breaklines=true,
+    frameround=ftff,
+    frame=single
+} 
+
+\begin{document}
+
+	%Qua viene usato lstlisting
+	\begin{lstlisting}[language=matlab]
+disp('Loop di Newton per l''equazione di Poisson')
+errN  = 1;
+iterN = 0;
+while errN > tollN % *(1 - exp(-0.05*iterN))
+    iterN = iterN + 1;
+    rho = q*(nintr*(exp((phip(:,k)-psi(:,k))/Vth) - exp((psi(:,k)-phin(:,k))/Vth)) + doping);
+    rho(setdiff(nOX,nI)) = 0;
+    F = A_epstot*psi(:,k) - Identity*rho;
+    coeff = q*nintr/Vth*(exp((psi(:,k)-phin(:,k))/Vth) + exp((phip(:,k)-psi(:,k))/Vth));
+    coeff(setdiff(nOX,nI)) = 0;
+    A = A_epstot + spdiags(Identity*coeff,0,nv,nv);
+    delta_psi = -A(nodes_inter,nodes_inter)\F(nodes_inter);
+    tk = 1; % - exp(-0.05*iterN); % damping
+    psi(nodes_inter,k) = psi(nodes_inter,k) + tk*delta_psi;
+    errN = norm(delta_psi,inf);
+end
+	\end{lstlisting}
+
+% Se il codice sorgente è disponibile in un file, si può includere direttamente con il comando:
+% \lstinputlisting[language=matlab]{main.m}
+	
+\end{document}

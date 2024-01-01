@@ -1,0 +1,50 @@
+\documentclass{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\newtheorem{theorem}{Teorema}
+\newtheorem{definition}{Definizione}
+\newtheorem{lem}{Lemma}
+
+\title{titolo}
+\author{autori}
+
+\begin{document}
+
+\maketitle
+
+\begin{definition}
+	Questa è una definizione.
+\end{definition}
+
+\begin{theorem}
+	Questo è un teorema.
+\end{theorem}
+
+\begin{proof}
+	Questa ne è la dimostrazione.
+\end{proof}
+
+\begin{theorem}
+    Un secondo teorema.
+\end{theorem}
+
+\begin{proof}
+	Attenzione quando si finisce con una formula:
+	\[
+		x+y. \qedhere
+	\]
+\end{proof}
+\noindent Altrimenti sono guai!
+
+\begin{lem}[titolo del lemma]
+Questo ambiente \`e diverso dagli altri.
+\end{lem}
+\begin{proof}
+Basta osservare la diversa numerazione.
+\end{proof}
+\end{document}

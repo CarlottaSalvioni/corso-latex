@@ -1,0 +1,31 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{csquotes}
+
+%utilizzo di biblatex al posto che latex
+\usepackage{biblatex}
+
+%file che viene usato per la bibliografia
+\addbibresource{sources}
+
+
+\title{Prova con biblatex}
+\author{Nahuel Foresta}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\section{Vediamo che si può fare}
+A titolo di esempio citiamo \cite{Nahuel19}
+
+%spazio verticale
+\vspace{5cm}
+
+\printbibliography
+
+\end{document}

@@ -1,0 +1,112 @@
+\documentclass{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\newtheorem{theorem}{Teorema}
+\newtheorem{definition}{Definizione}
+\newtheorem{lem}{Lemma}
+
+\begin{document}
+\section{Array e matrici}
+Iniziamo a lavorare con le cose serie. Ecco un sistema da risolvere:
+
+\[
+  \left(
+	\begin{array}{c c c}
+	  1 & 2 & 3 \\
+	  4 & 5 & 6 \\
+	  5 & 7 & 9
+	\end{array}
+   \right) 
+   \left[
+	 \begin{array}{c}
+	 x_1 \\ x_2 \\ x_3
+	 \end{array}
+   \right] 
+   = 
+  \left[
+  \begin{array}{c}
+    b \\ bb \\ bbb
+  \end{array}
+  \right]
+\]
+Oppure con le \verb|\matrix|:
+\[
+  \begin{pmatrix}
+    1 & 2 & 3 \\
+    4 & 5 & 6 \\
+    5 & 7 & 9
+  \end{pmatrix}
+  \begin{bmatrix}
+    x_1 \\ x_2 \\ x_3
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+    b \\ bb \\ bbb
+  \end{bmatrix}
+\]
+con una spaziatura migliore e una sintassi più facile.
+
+Queste sono le varie possibilità:
+$$
+\begin{matrix} 
+a & b \\
+c & d 
+\end{matrix}
+\quad
+\begin{pmatrix} 
+a & b \\
+c & d 
+\end{pmatrix}
+\quad
+\begin{bmatrix} 
+a & b \\
+c & d 
+\end{bmatrix}
+\quad
+\begin{vmatrix} 
+a & b \\
+c & d 
+\end{vmatrix}
+\quad
+\begin{Vmatrix} 
+a & b \\
+c & d 
+\end{Vmatrix}
+$$
+
+\section{Teoremi, definizioni, \dots}
+\begin{definition}
+	Questa è una definizione.
+\end{definition}
+
+\begin{theorem}
+	Questo è un teorema.
+\end{theorem}
+
+\begin{proof}
+	Questa ne è la dimostrazione.
+\end{proof}
+
+\begin{theorem}
+    Un secondo teorema.
+\end{theorem}
+
+\begin{proof}
+	Attenzione quando si finisce con una formula:
+	\[
+		x+y. \qedhere
+	\]
+\end{proof}
+\noindent Altrimenti sono guai!
+
+\begin{lem}[titolo del lemma]
+Questo ambiente \`e diverso dagli altri.
+\end{lem}
+\begin{proof}
+Basta osservare la diversa numerazione.
+\end{proof}
+\end{document}

@@ -1,0 +1,140 @@
+\documentclass[leqno]{beamer}
+
+% Stile per Beamer
+\usetheme{Warsaw}
+% Pacchetti
+\usepackage[italian]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amstext}
+\usepackage{alltt}
+\usepackage{verbatim}
+\usepackage{array}
+\usepackage{booktabs}
+%Per i links
+\usepackage{hyperref}
+\usepackage{graphicx}
+\graphicspath{{../img/}}
+
+\beamertemplatearrowbibitems
+
+% Informazioni sulla presentazione
+
+\title[La nostra prima presentazione in \LaTeX\ ]{La nostra prima presentazione in \LaTeX\ con un titolo su due righe}
+\author[Autori sintetici]{Autori in versione estesa}
+\date{Data della presentazione}
+\institute[Polimi]{Politecnico di Milano}
+\titlegraphic{\includegraphics[scale=0.1]{logo-aim}}
+%Se volete togliere le reference!!!
+
+%\usepackage[bf,footnotesize,center]{caption}
+%\captionsetup{labelformat=empty,labelsep=none}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Prima sezione}
+\begin{frame}
+    \frametitle{Questa \`e la prima slide}
+
+    Si possono inserire tutte le cose che abbiamo visto nei documenti in \LaTeX:
+
+    \begin{itemize}[<+->]
+     \item Elenchi puntati o numerati
+     \item Equazioni: $\frac{\partial \mathbf{U}}{\partial t} + \eta \frac{\partial \mathbf{F}(\mathbf{U})}{\partial x} = \mathbf{5}$
+     \item[@] Link: \url{http://www.mate.polimi.it/aim}
+     \item Teoremi, dimostrazioni
+     \item Tabelle, immagini, (filmati), \ldots
+     \item Bibliografia (come vedremo alla fine)
+     \item Everything else \ldots
+    \end{itemize}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Seconda sezione}
+
+\begin{frame}
+    \frametitle{Una slide con anche il sottotitolo}
+      \framesubtitle{Questo \`e il sottotitolo}
+
+    Sono presenti tutti gli ambienti matematici che vengono racchiusi in blocchi predefiniti:
+
+    \begin{theorem}
+    \label{teo:smart2}
+    Questo \`e l'enunciato di un teorema.
+    
+    \end{theorem}
+\begin{proof}
+    Questa ne \`e la dimostrazione.
+    \end{proof}
+    Si possono citare figure (Fig. \ref{fig:AIM}), teoremi (Teorema \ref{teo:smart2}), equazioni \ldots
+    e ovviamente anche elementi della bibliografia \cite{artelatex}.
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]
+  \frametitle{Inseriamo uno script di codice}
+
+  \begin{figure}[htbp]
+   \includegraphics[height=0.3\textheight]{AIM.eps}
+   \scriptsize{\caption{AIM}}
+   \label{fig:AIM}
+  \end{figure}
+
+  \pause
+
+  Per inserire l'immagine precedente serve il codice:
+  {\footnotesize
+  \begin{block}{titolo del blocco}
+  \begin{verbatim}
+  \begin{figure}[htbp]
+   \includegraphics[width=0.5\textwidth]{AIM.eps}
+   \caption{AIM}
+   \label{fig:AIM}
+  \end{figure}
+  \end{verbatim}
+  \end{block}
+  }
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{altri tipi di blocchi}
+  Questa slide serve per far vedere il comando \alert{alert}.
+  inoltre abbiamo
+  \begin{exampleblock}{esempio}
+   per gli esempi
+  \end{exampleblock}
+  \begin{alertblock}{ATTENZIONE!!}
+   attenti \`e in \alert{rosso}
+  \end{alertblock}
+  \begin{alertblock}{}
+   Si pu\`o anche fare senza titolo.
+  \end{alertblock}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+      \frametitle{Bibliografia}
+      \begin{thebibliography}{introlatex}
+%	\addcontentsline{toc}{section}{Bibliografia}
+
+	\bibitem[Gorni 09]{introlatex} G. Gorni, \emph{Introduzione al \LaTeX}.  \url{http://users.dimi.uniud.it/~gianluca.gorni/TeX/itTeXdoc/CorsoTeXStampa.pdf}. (2009).
+	\bibitem[Pantieri 08]{artelatex} L. Pantieri, \emph{L'arte di scrivere con \LaTeX}. \url{http://www.lorenzopantieri.net/LaTeX_files/ArteLaTeX.pdf}. (2008).
+	
+\end{thebibliography}
+
+\end{frame}
+
+\end{document}

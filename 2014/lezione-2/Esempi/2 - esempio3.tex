@@ -1,0 +1,36 @@
+\documentclass{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{amsmath}
+\usepackage{array}
+%\usepackage{verbatim}
+
+\begin{document}
+
+\section{Equazioni}
+	Questa è una formula senza riferimento:
+	\[
+	  (a+b)^n = \sum_{k=0}^n \binom{n}{k} a^k b^{n-k} = \sum_{k=0}^n \frac{n!}{k!(n-k)!} a^k b^{n-k}
+	\]
+	Questa è una formula con riferimento:
+	\begin{equation}
+		\label{eq:etichetta1}
+		f(x) = \left\{
+		\begin{array}{l l}
+			\beta - e^{\frac{1}{x-1}}   & \text{per $x \in (-\infty; 1]$}\\
+			\arctan{\sqrt[4]{x}}        & \text{per $x \in (1; \pi)$}\\
+			5                           & \text{se $x \in [\pi; \infty)$}
+		\end{array} \right.        
+	\end{equation}
+	Questa è una citazione \eqref{eq:etichetta1}.
+	Ma esistono anche ambienti più comodi, per esempio \verb|cases|:
+	\begin{equation}
+		f(x) =
+		\begin{cases}
+			\beta - e^{\frac{1}{x-1}}   & \text{per $x \in (-\infty; 1]$}\\
+			\arctan{\sqrt[4]{x}}        & \text{per $x \in (1; \pi)$}\\
+			5                           & \text{se $x \in [\pi; \infty)$}
+		\end{cases}
+	\end{equation}
+\end{document}

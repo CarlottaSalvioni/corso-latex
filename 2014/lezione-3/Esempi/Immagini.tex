@@ -1,0 +1,34 @@
+\documentclass{article}
+
+\usepackage[italian]{babel}
+\usepackage[pdftex]{graphicx}
+
+%ricordiamo la seguente serve per specificare dove sono le immagini
+\graphicspath{{../img/}}
+%E questa per utilizzare immagini eps (bisogna aggiungere -shell-escape nel comando pdflatex)
+\usepackage{epstopdf}
+
+\begin{document}
+
+\section{Immagini}
+
+Proviamo ora a inserire una immagine qui \includegraphics{AIM}. Anche per le immagini è possibile creare dei riferimenti (ad esempio vedi figura \ref{img:logo}).
+
+%Sintassi tipica
+\begin{figure}
+	\centering
+	\includegraphics{AIM}
+	\caption{La nostra prima immagine...}
+	\label{img:logo}
+\end{figure}
+
+\clearpage
+
+\begin{figure}
+	\centering
+	\includegraphics[width = \textwidth]{AIM}
+	\caption{La nostra seconda immagine...}
+	\label{img:logo2}
+\end{figure}
+
+\end{document} 

@@ -1,0 +1,54 @@
+\section{Tabelle...}
+
+\begin{tabular}{rlccr} % provate anche con \begin{tabular}{@{}rlccr@{}}
+    \toprule
+        Nome & Cognome & crediti & media & matricola \\
+    \cmidrule(r){1-2}
+    \cmidrule(rl){3-4}
+    \cmidrule(l){5-5}
+        Mario & Rossi & 25 & 28,3 & 572139 \\
+        Paolo & Verdi & 80 & 24 & 554291 \\
+        Giuseppe & Re & 112,5 & 22 & 537295 \\
+    \bottomrule
+\end{tabular}
+
+\section{... e array}
+
+Iniziamo a lavorare con le cose serie. Ecco un bel sistema da risolvere:
+
+\[
+  \left(
+  \begin{array}{c c c}
+    1 & 2 & 3 \\
+    4 & 5 & 6 \\
+    5 & 7 & 9
+  \end{array}
+  \right) \left[
+  \begin{array}{l}
+    x_1 \\ x_2 \\ x_3
+  \end{array}
+  \right] = \left[
+  \begin{array}{r}
+    b \\ bb \\ bbb
+  \end{array}
+  \right]
+\]
+
+Oppure:
+
+\[
+  \begin{pmatrix}
+    1 & 2 & 3 \\
+    4 & 5 & 6 \\
+    5 & 7 & 9
+  \end{pmatrix}
+  \begin{bmatrix}
+    x_1 \\ x_2 \\ x_3
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+    b \\ bb \\ bbb
+  \end{bmatrix}
+\]
+
+ma il risultato \`e praticamente lo stesso.

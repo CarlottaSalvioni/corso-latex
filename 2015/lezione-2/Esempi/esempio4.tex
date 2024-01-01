@@ -1,0 +1,46 @@
+\documentclass[]{article}
+
+\usepackage{amsmath}
+
+\begin{document}
+\section*{Allineamento equazioni}
+	\begin{align}
+		\sin(x) & \leq 1 \\
+		\arctan(+\infty) & = \frac{\pi}{2}
+	\end{align}
+
+	\begin{subequations}
+		\begin{align}
+			\sin(x) & \leq 1 \\
+			\arctan(+\infty) & = \frac{\pi}{2}
+		\end{align}
+	\end{subequations}
+
+	\[
+		\begin{aligned}
+			\sin(x) & \leq 1 \\
+			\arctan(+\infty) & = \frac{\pi}{2}
+		\end{aligned}
+	\]
+
+	\begin{alignat}{3}
+		\sin(x) & \leq &  1 \\
+		\arctan(-\infty) & = & - \frac{\pi}{2}
+	\end{alignat}
+
+	\[
+		\begin{alignedat}{3}
+			\sin(x) & \leq & 1 \\
+			\arctan(-\infty) & = & - \frac{\pi}{2}
+		\end{alignedat}
+	\]
+
+	\begin{equation}
+		f(x) = 
+		\begin{cases}
+		x^3 & \text{se } x \geq 0 \\
+		0 & \text{se } x < 0
+		\end{cases}
+	\end{equation}
+
+\end{document}
