@@ -11,3 +11,4 @@ Qui troverai un corso intensivo di LaTeX che dal livello base ti porterà a esse
 * Edizione 2018: Marco Bezzegato, Andrea Di Primio
 * Edizione 2021: Andrea Di Primio
 * Edizione 2022: Andrea Di Primio
+* Edizione 2025: Andrea Di Primio
